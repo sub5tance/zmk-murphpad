@@ -33,17 +33,17 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (RoMac)
-        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=romac -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: RoMac DTS File
+      - name: West Build (MurphPad)
+        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=murphpad -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: MurphPad DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano_v2.dts.pre.tmp
-      - name: RoMac Kconfig file
+      - name: MurphPad Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 romac_nice_nano_v2.uf2
-      - name: Archive (RoMac)
+        run: cp build/zephyr/zmk.uf2 murphpad_nice_nano_v2.uf2
+      - name: Archive (MurphPad)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: romac_nice_nano_v2.uf2
+          path: murphpad_nice_nano_v2.uf2
