@@ -71,12 +71,12 @@
         fn_layer {
 		label = "fn layer";
             bindings = <
-                &trans      &trans     &trans        &rgb_ug RGB_EFF &rgb_ug RGB_TOG  
-                &trans      &kp KP_NUM &trans        &trans          &trans     
-                &trans      &trans     &trans        &trans	     &trans
-                &bt BT_CLR  &trans     &trans        &trans          &trans    
-                &kp ESC     &trans     &trans        &trans          &trans
-                &trans      &trans     &trans        &trans          &trans           
+                &trans      &dp C_BRI_UP &dp C_BRI_DN  &rgb_ug RGB_EFF &rgb_ug RGB_TOG  
+                &trans      &trans       &trans        &trans          &trans     
+                &trans      &trans       &trans        &trans	       &trans
+                &bt BT_CLR  &trans       &trans        &trans          &trans    
+                &kp ESC     &trans       &trans        &trans          &trans
+                &trans      &trans       &trans        &trans          &trans           
             >;  
 			sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 
