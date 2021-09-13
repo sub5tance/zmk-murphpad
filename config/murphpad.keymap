@@ -56,13 +56,21 @@
 
 		default_layer {
 		label = "default layer";
+// ---------------------------------
+// |       | Tab | Hom | End | Bsp |
+// |       -------------------------
+// |       |  7  |  8  |  9  |  +  |
+// | Knob  |  4  |  5  |  6  |     |
+// | F2    |  1  |  2  |  3  | Ent |
+// | MO(1) |  0        |  .  |     |
+// ---------------------------------
             bindings = <
-                &bt BT_CLR       &kp TAB         &kp HOME        &kp END           &kp BSPC   
-                &rgb_ug RGB_TOG  &kp KP_NUM      &kp KP_DIVIDE   &kp KP_MULTIPLY   &kp KP_MINUS    
-                &rgb_ug RGB_EFF  &kp KP_N7       &kp KP_N8       &kp KP_N9         &kp KP_PLUS   
-                &kp C_MUTE       &kp KP_N4       &kp KP_N5       &kp KP_N6         &trans
-                &kp F2           &kp KP_N1	 &kp KP_N2	 &kp KP_N3         &kp KP_ENTER
-                &mo 1            &kp KP_N0       &trans          &kp KP_DOT        &trans
+                &trans		&kp TAB		&kp HOME	&kp END		&kp BSPC   
+                &trans		&kp KP_NUM	&kp KP_DIVIDE	&kp KP_MULTIPLY	&kp KP_MINUS    
+                &rgb_ug RGB_EFF	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_PLUS   
+                &kp C_MUTE	&kp KP_N4	&kp KP_N5	&kp KP_N6	&trans
+                &kp F2		&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_ENTER
+                &mo 1		&kp KP_N0	&trans		&kp KP_DOT	&trans
             >;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
@@ -70,13 +78,21 @@
 		
         fn_layer {
 		label = "fn layer";
+// ---------------------------------
+// |       | Br+ | Br- | Ref | Rtg |
+// |       -------------------------
+// |       |  7  |  8  |  9  |  +  |
+// | Knob  |  4  |  5  |  6  |     |
+// | ESC   |  1  |  2  |  3  | Ent |
+// | MO(1) |  Calc     |  .  |     |
+// ---------------------------------
             bindings = <
-                &trans      &kp C_BRI_UP 	&kp C_BRI_DN  	&rgb_ug RGB_EFF &rgb_ug RGB_TOG  
-                &trans      &rgb_ug RGB_BRI 	&rgb_ug RGB_BRD	&rgb_ug RGB_SPI &rgb_ug RGB_SPD
-                &trans      &rgb_ug RGB_HUI 	&rgb_ug RGB_HUD &rgb_ug RGB_SAI &rgb_ug RGB_SAD
-                &bt BT_CLR  &trans       	&trans        	&trans          &trans
-                &kp ESC     &bt BT_SEL 0       	&bt BT_SEL 1	&bt BT_SEL 2	&rgb_ug RGB_COLOR_HSB(139,87,72)
-                &trans      &trans       	&trans        	&bt BT_CLR	&trans           
+                &trans		&kp C_BRI_UP	&kp C_BRI_DN	&rgb_ug RGB_EFF	&rgb_ug RGB_TOG  
+                &trans		&rgb_ug RGB_BRI	&rgb_ug RGB_BRD	&rgb_ug RGB_SPI	&rgb_ug RGB_SPD
+                &trans		&rgb_ug RGB_HUI	&rgb_ug RGB_HUD	&rgb_ug RGB_SAI	&rgb_ug RGB_SAD
+                &trans		&trans       	&trans		&trans		&trans
+                &kp ESC		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&rgb_ug RGB_COLOR_HSB(139,87,72)
+                &trans		&kp K_CALC	&trans		&bt BT_CLR	&trans           
             >;  
 			sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 
